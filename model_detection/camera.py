@@ -11,6 +11,8 @@ bird_detection_webcam = cv2.CascadeClassifier(os.path.join(settings.BASE_DIR, 'o
 class VideoCamera(object):
 	def __init__(self):
 		self.video = cv2.VideoCapture(1, cv2.CAP_DSHOW)  # 1 - for USB webcam on the laptop, 0 - for integrated laptop's webcam
+		if not self.video.isOpened():
+			self.video = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
 	def __del__(self):
 		self.video.release()
