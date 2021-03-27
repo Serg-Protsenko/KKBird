@@ -3,7 +3,7 @@ dj-database-url==0.5.0
 Django==3.1.7
 gunicorn==20.0.4
 numpy==1.20.1
-opencv-python==4.5.1.48
+opencv-python-headless
 psycopg2==2.8.6
 pytz==2021.1
 sqlparse==0.4.1
