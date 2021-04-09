@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'model_detection',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'KKBird.wsgi.application'
+ASGI_APPLICATION = "KKBird.asgi.application"
 
 
 # Database

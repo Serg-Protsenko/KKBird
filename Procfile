@@ -1,1 +1,1 @@
-web: gunicorn KKBird.wsgi --log-file -
+web: daphne KKBird.asgi:application --port $PORT --bind 0.0.0.0 -v2
