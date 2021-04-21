@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get user video</title>
+</head>
+<body>
+<p>
+    <video id="video"></video>
+</p>
+<script>
+
+    navigator.mediaDevices.getUserMedia({video:true,audio:false}).then(function(stream){
+	    var video=document.getElementById('video');
+	    video.srcObject=stream;
+	    video.play();
+    }).catch(function(er){alert(er.message);});
+
+</script>
+</body>
+</html>
